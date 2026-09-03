@@ -59,10 +59,6 @@ const NAV_ITEMS = [
         label: "Milling Calculators",
         path: "/calculator",
       },
-      {
-        label: "Grain Circle ERP",
-        path: "/GrainCircle",
-      },
     ],
   },
 ];
