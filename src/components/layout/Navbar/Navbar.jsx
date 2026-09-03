@@ -237,7 +237,10 @@ export default function Navbar() {
           </nav>
 
           {/* ================= DESKTOP LOGIN ================= */}
-          <Link to="/login" className="navbar__login-btn">
+          <Link
+            to="https://rscg.promiller.co/authui/login"
+            className="navbar__login-btn"
+          >
             Login
           </Link>
 
