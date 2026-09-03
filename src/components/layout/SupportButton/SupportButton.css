@@ -1,0 +1,45 @@
+.support-btn {
+  position: fixed;
+  bottom: 60px;
+  right: 24px;
+
+  background: #ff7800;
+  color: #fff;
+
+  padding: 14px 18px;
+  border-radius: 999px;
+
+  font-weight: 600;
+  font-size: 15px;
+  font-family: "Lato", sans-serif;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  z-index: 999;
+
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+
+.support-btn:hover {
+  transform: translateY(-3px);
+  background: #ffa8065d;
+}
+
+  @media (max-width: 768px) {
+  .support-btn {
+    display: none;
+  }
+
+  .mobile-footer-btn {
+    display: block;
+    position: static;
+    margin: 20px auto;
+    width: fit-content;
+    box-shadow: none;
+  }
+
+  .mobile-footer-btn:hover {
+    transform: none;
+    background: #ff7800;
+  }
+} 

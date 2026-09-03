@@ -1,0 +1,254 @@
+.footer {
+  background: linear-gradient(
+  90deg,
+  oklch(45% 0.08 150) 0%,
+  oklch(55% 0.09 145) 100%
+);
+  padding: 40px 0 0;
+  position: relative; 
+}
+
+.footer__container{
+  max-width:1400px;
+  margin:0 auto;
+  padding:0 5%;
+  display:grid;
+  grid-template-columns:1.2fr 1.2fr 1.2fr;
+  gap:50px;
+}
+.footer__column h2 {
+  font-family:"Lato",sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 18px;
+  color: #fff;
+}
+
+.footer__column h3 { 
+   font-family:"Lato",sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 18px;
+  color: #fff;
+}
+
+.footer__column p {
+   font-family:"Lato",sans-serif;
+  font-size: 15px;
+  line-height: 1.8;
+  color: #ffffff;
+}
+
+.footer__column li {
+   font-family:"Lato",sans-serif;
+  font-size: 15px;
+  color: #ffffff;
+  margin-bottom: 12px;
+  transition: color 0.3s ease;
+  list-style: none; 
+  cursor:pointer;
+}
+
+.footer__column li:hover {
+  color: #ffffffcc;
+}
+.footer__bottom {
+  max-width: 1400px;
+  margin: 40px auto 0;
+  padding: 20px 5%;
+  border-top: 1px solid rgba(255,255,255,0.2);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+}
+.footer__contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.footer__contact-item strong {
+  display: block;
+  color: #fff;
+  font-family: "Lato", sans-serif;
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.footer__contact-item p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer__contact-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  color: #fff;
+  text-decoration: none;
+  font-family: "Lato", sans-serif;
+  font-size: 15px;
+    cursor:pointer;
+}
+
+.footer__icon {
+  color: #fff;
+  font-size: 20px !important;
+  flex-shrink: 0;
+}
+.footer__copyright {
+  font-size: 15px;
+   font-family:"Lato",sans-serif;
+  color: #ffffff;
+}
+.footer__logo {
+  display: flex;
+  align-items: center;
+}
+.footer__logo img {
+  max-height: 60px;
+  width: auto;
+  transform: scale(1.25);
+  transform-origin: center;
+}
+@media (min-width:1025px){
+
+  .footer__column{
+    text-align:left;
+  }
+
+  .footer__column:last-child{
+    grid-column:auto;
+  }
+
+}
+@media (max-width:1024px){
+
+  .footer{
+    padding:40px 0 0;
+  }
+
+  .footer__container{
+    grid-template-columns:1fr 1fr;
+    gap:35px;
+    padding:0 24px;
+  }
+
+  .footer__column:last-child{
+    grid-column:1 / -1;
+  }
+
+  .footer__bottom{
+    padding:18px 24px;
+  }
+
+}
+@media (max-width:767px){
+
+  .footer{
+    padding:35px 0 0;
+  }
+
+  .footer__container{
+    grid-template-columns:1fr;
+    gap:30px;
+    padding:0 18px;
+  }
+
+  .footer__column{
+    text-align:left;
+  }
+
+  .footer__column h2,
+  .footer__column h3{
+    font-size:20px;
+    margin-bottom:14px;
+  }
+
+  .footer__column p,
+  .footer__column li{
+    font-size:14px;
+    line-height:1.7;
+  }
+
+  .footer__contact-item{
+    gap:10px;
+    margin-bottom:16px;
+  }
+
+  .footer__contact-item strong{
+    font-size:14px;
+  }
+
+  .footer__contact-item p{
+    font-size:13px;
+  }
+
+  .footer__contact-link{
+    font-size:14px;
+    gap:10px;
+    word-break:break-word;
+  }
+
+  .footer__icon{
+    font-size:18px !important;
+  }
+
+  .footer__bottom{
+    flex-direction:column-reverse;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    gap:14px;
+    padding:18px;
+  }
+
+  .footer__logo img{
+    height:48px;
+  }
+
+  .footer__copyright{
+    font-size:13px;
+    line-height:1.6;
+  }
+
+}
+@media (max-width:380px){
+
+  .footer__container{
+    padding:0 14px;
+  }
+
+  .footer__column h2,
+  .footer__column h3{
+    font-size:18px;
+  }
+
+  .footer__column p,
+  .footer__column li{
+    font-size:13px;
+  }
+
+  .footer__contact-item strong{
+    font-size:13px;
+  }
+
+  .footer__contact-item p,
+  .footer__contact-link{
+    font-size:12px;
+  }
+
+  .footer__logo img{
+    height:42px;
+  }
+
+  .footer__copyright{
+    font-size:12px;
+  }
+
+}

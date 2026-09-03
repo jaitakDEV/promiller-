@@ -1,0 +1,85 @@
+.mavian-page{
+    background:#fff;
+    padding:50px 0;
+}
+
+.extra_text{
+    font-style:italic;
+}
+
+.mavian-container{
+    width:min(1180px,calc(100% - 40px));
+    margin:auto;
+    display:grid;
+    grid-template-columns:380px 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.mavian-image img{
+    width:100%;
+    display:block;
+    border:3px solid #fff;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+.mavian-subtitle{
+    color:#ff7800;
+    font-size:15px;
+    font-weight:700;
+    letter-spacing:4px;
+    text-transform:uppercase;
+}
+
+.mavian-content h2{
+    font-size:36px;
+    color:#0d5b43;
+    margin:10px 0 25px;
+    font-family:"Lato",sans-serif;
+}
+
+.mavian-content p{
+    font-size:15px;
+    line-height:1.9;
+    color:#222;
+    margin-bottom:22px;
+    font-family:"Lato",sans-serif;
+    text-align:justify;
+}
+.director-btn {
+  display: inline-block;
+ padding: 10px 34px;
+  border: none;
+  background-color: #ff7800;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.director-btn:hover {
+  background-color: #ffa8065d;
+}
+
+@media(max-width:900px){
+
+.mavian-container{
+    grid-template-columns:1fr;
+    gap:35px;
+}
+
+.mavian-content{
+    order:1;
+}
+
+.mavian-image{
+    order:2;
+    max-width:360px;
+    margin:auto;
+}
+
+.mavian-content h2{
+    font-size:34px;
+}
+
+}

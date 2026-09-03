@@ -1,0 +1,492 @@
+.journey-slider-section {
+  position: relative;
+  min-height: auto;
+  overflow: hidden;
+  background:  #fff;
+  color: #101713;
+  isolation: isolate;
+}
+.bold-text{
+  font-weight:700;
+}
+
+.journey-backdrop-asset {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+}
+
+.journey-backdrop-asset img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.85);
+}
+
+.journey-backdrop-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(90deg, rgba(10, 20, 14, 0.92) 0%, rgba(10, 20, 14, 0.76) 48%, rgba(10, 20, 14, 0.38) 100%),
+    rgba(0, 0, 0, 0.26);
+}
+
+.journey-slider-container {
+  width: min(1180px, calc(100% - 48px));
+  min-height: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 85px;
+  padding: 42px 0 44px;
+}
+
+.journey-stage {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 420px);
+  align-items: center;
+  gap: 38px;
+}
+
+.journey-stage__content {
+  max-width: 650px;
+}
+
+.journey-stage__subtitle {
+  display: inline-block;
+  margin-bottom: 15px;
+  color: #ff7800;
+  font-size: 15px;
+  font-weight: 800;
+  font-family:"Lato",sans-serif;
+  letter-spacing: 0.18em;
+}
+
+.journey-stage__year-big {
+  margin: 0 0 8px;
+  color:#0d5b43;
+  font-size: clamp(58px, 10vw, 118px);
+  line-height: 0.9;
+  font-family:"Lato",sans-serif;
+}
+
+.journey-stage__title {
+  margin: 0 0 14px;
+  color: black;
+  font-size: 20px;
+  font-family:"Lato",sans-serif;
+}
+
+.journey-stage__desc {
+  max-width: 620px;
+  color: black;
+  font-size: 15px;
+  line-height: 1.65;
+  font-family:"Lato",sans-serif;
+}
+
+.journey-stage__media {
+  justify-self: end;
+  width: min(100%, 420px);
+  height: 320px;
+  border: 0;
+  border-radius: 0;
+  overflow: hidden;
+  box-shadow: none;
+  aspect-ratio: 16 / 9;
+  border:3px solid #fff;
+  box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+.journey-stage__free-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  padding: 0;
+  background: transparent;
+}
+
+.journey-controls-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  gap: 70px;
+}
+
+.journey-timeline-track {
+  position: relative;
+  min-height: 62px;
+}
+
+.track-line-bg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 21px;
+  height: 2px;
+  background: black;
+}
+
+.track-nodes-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.timeline-tick-wrapper {
+  min-width: 44px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  color: black;
+  cursor: pointer;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.timeline-tick-wrapper:hover,
+.timeline-tick-wrapper.is-active {
+  color: black;
+  transform: translateY(-10px);
+}
+
+.timeline-year-label {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.timeline-tick-mark {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: currentColor;
+  box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.08);
+}
+
+.timeline-tick-wrapper.is-active .timeline-tick-mark {
+  background:#ff7800;
+  box-shadow: 0 0 0 8px rgba(245, 158, 11, 0.22);
+}
+
+.journey-nav-arrows {
+  display: flex;
+  gap: 12px;
+}
+
+.nav-arrow {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 50%;
+  color: #fff;
+  background: #ff7800;
+  font-size: 24px;
+  line-height: 1;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.nav-arrow:hover {
+  background: #ffa8065d;
+  transform: translateY(-2px);
+}
+/* ================= ABOUT SECTION ================= */
+
+.journey-about-section{
+  width:100%;
+  padding:80px 0 20px;
+}
+
+.journey-about-container{
+  width:min(1180px, calc(100% - 48px));
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:1fr minmax(320px,420px);
+  gap:45px;
+  align-items:center;
+}
+
+.journey-about-content{
+  max-width:750px;
+  text-align:justify;
+}
+
+
+.journey-about-title{
+  margin:0 0 18px;
+  font-size:36px;
+  color:#0d5b43;
+  font-family:"Lato",sans-serif;
+  font-weight:700;
+}
+
+.journey-about-text{
+  color:#101713;
+  font-size:15px;
+  line-height:1.8;
+  font-family:"Lato",sans-serif;
+}
+
+.journey-about-image{
+  width:100%;
+  height:340px;
+  overflow:hidden;
+   border:3px solid #fff;
+    box-shadow:0 10px 30px rgba(0,0,0,.15); 
+}
+
+.journey-about-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+.director-btn {
+  display: inline-block;
+  position:relative;
+ padding: 10px 34px;
+  border: none;
+  border-radius:3px;
+  background-color: #ff7800;
+  color: #fff;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.director-btn:hover {
+  background-color: #ffa8065d;
+}
+@media (max-width:900px){
+
+  .journey-slider-container{
+    width:calc(100% - 30px);
+    padding:40px 0;
+    gap:45px;
+  }
+
+  .journey-stage{
+    grid-template-columns:1fr;
+    gap:30px;
+    text-align:center;
+  }
+
+  .journey-stage__content{
+    max-width:100%;
+  }
+
+  .journey-stage__subtitle{
+    font-size:14px;
+  }
+
+  .journey-stage__year-big{
+    font-size:70px;
+  }
+
+  .journey-stage__title{
+    font-size:28px;
+  }
+
+  .journey-stage__desc{
+    max-width:100%;
+    font-size:15px;
+  }
+
+  .journey-stage__media{
+    justify-self:center;
+    width:90%;
+    max-width:360px;
+    height:auto;
+    aspect-ratio:1/1;
+  }
+
+  .journey-controls-row{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+    align-items:center;
+  }
+
+  .journey-timeline-track{
+    width:100%;
+    overflow-x:auto;
+    overflow-y:hidden;
+    padding-bottom:10px;
+    scrollbar-width:none;
+  }
+
+  .journey-timeline-track::-webkit-scrollbar{
+    display:none;
+  }
+
+  .track-line-bg{
+    width:760px;
+    left:0;
+    right:auto;
+  }
+
+  .track-nodes-container{
+    width:760px;
+    justify-content:space-between;
+    padding-bottom:8px;
+  }
+
+  .timeline-tick-wrapper{
+    flex:0 0 auto;
+  }
+
+  .journey-nav-arrows{
+    justify-content:center;
+  }
+  .journey-about-container{
+  grid-template-columns:1fr;
+  text-align:center;
+  gap:30px;
+}
+
+.journey-about-content{
+  max-width:100%;
+}
+
+.journey-about-title{
+  font-size:36px;
+}
+
+.journey-about-image{
+  max-width:420px;
+  width:100%;
+  margin:auto;
+  height:320px;
+}
+
+}
+
+@media (max-width:600px){
+
+  .journey-slider-container{
+    width:calc(100% - 20px);
+    padding:30px 0;
+    gap:35px;
+  }
+
+  .journey-stage{
+    gap:22px;
+  }
+
+  .journey-stage__subtitle{
+    font-size:15px;
+    letter-spacing:3px;
+  }
+
+  .journey-stage__year-big{
+    font-size:56px;
+  }
+
+  .journey-stage__title{
+    font-size:20px;
+  }
+
+  .journey-stage__desc{
+    font-size:15px;
+    line-height:1.7;
+  }
+
+  .journey-stage__media{
+    width:100%;
+    max-width:680px;
+    margin:auto;
+    object-fit:cover;
+  }
+
+  .journey-timeline-track{
+    overflow-x:auto;
+    overflow-y:hidden;
+    padding-bottom:15px;
+  }
+
+  .track-line-bg{
+    width:760px;
+  }
+
+  .track-nodes-container{
+    width:760px;
+    gap:0;
+  }
+
+  .timeline-year-label{
+    font-size:11px;
+  }
+
+  .timeline-tick-mark{
+    width:10px;
+    height:10px;
+  }
+
+  .timeline-tick-wrapper.is-active{
+    transform:translateY(-8px);
+  }
+
+  .journey-nav-arrows{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+  }
+
+  .nav-arrow{
+    width:44px;
+    height:44px;
+    font-size:22px;
+  }
+  .journey-about-section{
+  padding:50px 0 15px;
+}
+
+.journey-about-title{
+  font-size:20px;
+}
+
+.journey-about-text{
+  font-size:15px;
+  line-height:1.7;
+  text-align:justify;
+}
+
+.journey-about-image{
+  height:220px;
+}
+
+}
+
+@media (max-width:400px){
+
+  .journey-stage__year-big{
+    font-size:46px;
+  }
+
+  .journey-stage__title{
+    font-size:20px;
+  }
+
+  .journey-stage__desc{
+    font-size:13px;
+  }
+
+  .journey-stage__media{
+    height:220px;
+    object-fit:contain;
+    max-width:380px;
+  }
+
+  .nav-arrow{
+    width:40px;
+    height:40px;
+    font-size:20px;
+  }
+
+}

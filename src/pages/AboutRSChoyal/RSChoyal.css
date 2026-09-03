@@ -1,0 +1,133 @@
+.director-page {
+  background: #fff;
+  padding: 50px 0;
+}
+
+.bold-text {
+  font-weight: 700;
+}
+
+.director-container {
+  width: min(1180px, calc(100% - 40px));
+  margin: auto;
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.director-container.reverse {
+  grid-template-columns: 1fr 420px;
+  margin-top: 80px;
+}
+
+.director-image img {
+  width: 100%;
+  object-fit:cover;
+  display: block;
+  border: 3px solid #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.director-image:hover img {
+  transform: scale(1.05);
+}
+
+/* Heading */
+
+.director-content h2 {
+  font-size: 38px;
+  color: #0d5b43;
+  margin-bottom: 14px;
+  font-family: "Lato", sans-serif;
+}
+
+/* Role & Company */
+
+.director-info {
+  margin-bottom: 28px;
+}
+
+.director-role {
+  margin: 0;
+  /* color: #ff7800; */
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  line-height: 1.6;
+}
+
+.director-company {
+  margin-top: 10px;
+  color: #333;
+  font-size: 20px;
+  font-weight: 550;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+  max-width: 650px;
+}
+
+/* Paragraph */
+
+.director-content p {
+  font-size: 15px;
+  line-height: 1.9;
+  color: #222;
+  margin-bottom: 22px;
+  font-family: "Lato", sans-serif;
+  text-align: justify;
+}
+
+/* Website Link */
+
+.director-btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 34px;
+  border-radius:3px;
+  border: none;
+  background-color: #ff7800;
+  color: #fff;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.director-btn:hover {
+  background-color: #ffa8065d;
+}
+
+/* Mobile */
+
+@media (max-width: 900px) {
+
+  .director-container,
+  .director-container.reverse {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .director-content {
+    order: 1;
+    text-align: justify;
+  }
+
+  .director-image {
+    order: 2;
+    max-width: 360px;
+    margin: auto;
+  }
+
+  .director-content h2 {
+    font-size: 32px;
+  }
+
+  .director-role {
+    font-size: 14px;
+    letter-spacing: 2px;
+  }
+
+  .director-company {
+    font-size: 18px;
+  }
+}

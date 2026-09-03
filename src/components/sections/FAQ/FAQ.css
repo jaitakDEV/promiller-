@@ -1,0 +1,306 @@
+
+
+.faq-page {
+  background: #fff;
+  color: #17392d;
+}
+
+.faq-hero{
+    padding: 0 24px;
+    text-align:center;
+}
+
+.faq-hero-content {
+  max-width: 800px;
+  margin: auto;
+  font-family:"Lato",sans-serif;
+  font-size: 20px;
+}
+
+.faq-pill {
+  display: inline-block;
+  padding: 10px 22px;
+  border-radius: 999px;
+  background: rgba(13,91,67,.08);
+  color: #0d5b43;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: .12em;
+}
+
+.faq-hero h1{
+    font-family:"Lato",sans-serif;
+    color: #0d5b43;
+    font-size:36px;
+    line-height:1.1;
+    margin:16px 0 10px;
+}
+.faq-hero p{
+    font-size:15px;
+    color:black;
+    line-height:1.8;
+    margin-bottom:10px;
+}
+
+.faq-body{
+    max-width:850px;
+    margin:auto;
+    padding:10px 20px 40px;
+}
+.faq-content{
+    width:100%;
+}
+
+
+
+.faq-sidebar {
+  position: sticky;
+  top: 100px;
+}
+
+.faq-sidebar h3 {
+  margin-bottom: 20px;
+}
+
+.faq-sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.faq-sidebar li {
+  padding: 12px 14px;
+  border-radius: 12px;
+  cursor: pointer;
+  color: #666;
+  transition: .3s;
+}
+
+.faq-sidebar li:hover {
+  background: rgba(13,91,67,.08);
+  color: #0d5b43;
+}
+
+/* ==========================================================
+   FAQ CARDS
+========================================================== */
+
+.faq-card {
+  background: #fff;
+  border: 1px solid #ece7de;
+  border-radius: 20px;
+  padding: 22px;
+  margin-bottom: 14px;
+  cursor: pointer;
+  transition: .35s;
+  box-shadow: 0 10px 30px rgba(0,0,0,.05);
+}
+
+.faq-card:hover {
+  transform: translateY(-5px);
+}
+
+.faq-q {
+  display: flex;
+  justify-content: space-between;
+  font-weight:600;
+  font-size:15px;
+  font-family:"Lato",sans-serif;
+}
+
+.icon {
+  font-size: 1.4rem;
+  color: #0d5b43;
+}
+
+/* ANIMATION */
+.faq-a {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: .4s ease;
+   font-weight:600;
+  font-size:15px;
+  font-family:"Lato",sans-serif;
+}
+
+.faq-card.open .faq-a {
+  max-height: 200px;
+  opacity: 1;
+  margin-top: 12px;
+}
+
+.faq-a p {
+  color: #666;
+  line-height: 1.7;
+}
+
+/* ==========================================================
+   CTA
+========================================================== */
+
+.faq-cta {
+  text-align: center;
+  padding: 90px 20px;
+  background: linear-gradient(135deg,#0d5b43,#157552);
+  color: white;
+  margin-top: 60px;
+}
+
+.faq-cta h2 {
+  font-size: 2.6rem;
+  margin-bottom: 10px;
+}
+
+.faq-cta p {
+  opacity: .9;
+  margin-bottom: 25px;
+}
+
+.faq-cta button {
+  padding: 16px 34px;
+  border: none;
+  border-radius: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  background: white;
+  color: #0d5b43;
+  transition: .3s;
+}
+
+.faq-cta button:hover {
+  transform: translateY(-5px);
+}
+
+@media (max-width:1024px){
+
+  .faq-hero{
+    padding:30px 20px 20px;
+  }
+
+  .faq-hero-content{
+    max-width:700px;
+  }
+
+  .faq-hero h1{
+    font-size:32px;
+  }
+
+  .faq-hero p{
+    font-size:15px;
+  }
+
+  .faq-body{
+    max-width:100%;
+    padding:20px;
+  }
+
+  .faq-card{
+    padding:20px;
+  }
+  .faq-q{
+    font-weight:400;
+    color:#000;
+  }
+  .faq-a{
+    font-weight:400;
+  }
+  .faq-a p{
+    color:#000;
+  }
+}
+@media (max-width:767px){
+
+  .faq-hero{
+    padding:20px 16px 16px;
+  }
+
+  .faq-hero-content{
+    max-width:100%;
+  }
+
+  .faq-hero h1{
+    font-size:28px;
+    line-height:1.2;
+  }
+
+  .faq-hero p{
+    font-size:14px;
+    line-height:1.7;
+  }
+
+  .faq-body{
+    padding:16px;
+  }
+
+  .faq-card{
+    padding:16px;
+    border-radius:14px;
+    margin-bottom:12px;
+  }
+
+  .faq-q{
+    font-size:15px;
+    gap:12px;
+    align-items:flex-start;
+    line-height:1.5;
+    font-weight:400;
+    color:#000;
+  }
+
+  .icon{
+    font-size:22px;
+    flex-shrink:0;
+  }
+
+  .faq-card.open .faq-a{
+    max-height:500px;
+    margin-top:12px;
+  }
+
+  .faq-a{
+    font-size:14px;
+     font-weight:400;
+  }
+
+  .faq-a p{
+    line-height:1.7;
+    color:#000;
+  }
+
+}
+@media (max-width:380px){
+
+  .faq-hero{
+    padding:18px 12px 14px;
+  }
+
+  .faq-hero h1{
+    font-size:24px;
+  }
+
+  .faq-hero p{
+    font-size:13px;
+     font-weight:400;     
+  }
+
+  .faq-body{
+    padding:12px;
+  }
+
+  .faq-card{
+    padding:14px;
+  }
+
+  .faq-q{
+    font-size:14px;
+  }
+
+  .icon{
+    font-size:20px;
+  }
+
+  .faq-a{
+    font-size:13px;
+  }
+
+}

@@ -1,0 +1,465 @@
+
+.hero {
+  background: #000;
+}
+
+.hero__frame {
+  position: relative;
+  height: min(550px, calc(85vh - 40px));
+  min-height: 590px;
+  overflow: hidden;
+}
+
+.hero__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* DARK OVERLAY */
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: rgba(0,0,0,0.2);
+}
+
+/* =========================
+   LOGOS (BIG FIX)
+========================= */
+
+.hero__logo-wrapper {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3%;
+  z-index: 10;
+  margin-bottom:100px;
+}
+
+.logo-left {
+  height: 280px;
+  width: auto;
+  object-fit: contain;
+}
+
+.logo-right {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+}
+/* =========================
+   CONTENT
+========================= */
+
+.hero__content h1 {
+  color: white;
+  font-size:36px;
+  margin: 0;
+  font-weight: 700;
+  padding-top: 90px;
+  font-family:'Lato',sans-serif;
+}
+
+.text_1{
+  color: #ff7800;
+  font-weight:800;
+}
+
+.text_2{
+  color:#fff;
+}
+.text_3{
+color:#21b65f;
+}
+.hero__content p {
+  color: #ff7800;
+  margin-top: 50px;
+  font-weight: 750;
+  letter-spacing: 2px;
+  font-size:15px;
+  font-family:'Lato',sans-serif;
+}
+
+.hero__content {
+   width:min(92%,920px);
+  margin-top: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  font-family:'Lato',sans-serif;
+}
+
+.hero__btn {
+  margin-top: 20px;
+  padding: 14px 34px;
+  border: none;
+  background: #ff7800;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size:15px;
+  font-family:'Lato',sans-serif;
+}
+
+.hero__btn:hover {
+  transform: translateY(-4px);
+  background:#ffa8065d;
+}
+
+/* =========================
+   STATS BAR (OLD STYLE RESTORED)
+========================= */
+
+.hero__stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+   background: linear-gradient(
+    90deg,
+    oklch(45% 0.08 150),
+    oklch(55% 0.09 145)
+  ); 
+  padding: 25px 0;
+  font-family:'Lato',sans-serif;
+}
+
+.hero__stat-col {
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+
+.hero__stat-col:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 20%;
+  height: 60%;
+  width: 1px;
+  background: rgba(255,255,255,0.6);
+  font-family:'Lato',sans-serif;
+}
+
+.hero__stat-col h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  color:white;
+  font-family:'Lato',sans-serif;
+}
+
+.hero__stat-col p {
+  margin-top: 5px;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family:'Lato',sans-serif;
+}
+
+
+@media (max-width:1200px){
+
+.hero__frame{
+    height:min(520px,80vh);
+}
+
+.logo-left{
+    height:220px;
+}
+
+.logo-right{
+    height:70px;
+}
+
+.hero__content{
+    margin-top:120px;
+}
+
+.hero__content h1{
+    font-size:32px;
+}
+
+}
+
+/* ---------- Tablet ---------- */
+
+@media (max-width:992px){
+
+.hero__frame{
+    height:85vh;
+    min-height:560px;
+}
+
+.hero__logo-wrapper{
+    padding:0 24px;
+}
+
+.logo-left{
+    height:180px;
+}
+
+.logo-right{
+    height:60px;
+}
+
+.hero__content{
+    width:90%;
+    margin-top:100px;
+}
+
+.hero__content h1{
+    font-size:30px;
+    line-height:1.25;
+}
+
+.hero__content p{
+    font-size:14px;
+    margin-top:28px;
+}
+
+.hero__btn{
+    padding:13px 30px;
+}
+
+.hero__stats{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.hero__stat-col{
+    padding:18px;
+}
+
+.hero__stat-col:nth-child(2)::after{
+    display:none;
+}
+
+.hero__stat-col:nth-child(odd)::after{
+    display:block;
+}
+
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width:768px){
+
+.hero__frame{
+    height:100svh;
+    min-height:620px;
+}
+
+.hero__overlay{
+    padding:20px;
+}
+
+.hero__logo-wrapper{
+    top:10px;
+    padding:0 16px;
+}
+
+.logo-left{
+    height:320px;
+}
+
+.logo-right{
+    height:100px;
+}
+
+.hero__content{
+    width:100%;
+    margin-top:90px;
+    padding:0 12px;
+}
+
+.hero__content h1{
+    font-size:28px;
+    line-height:1.3;
+}
+
+.hero__content p{
+    font-size:14px;
+    margin-top:20px;
+    letter-spacing:1px;
+    text-align:center;
+}
+
+.hero__btn{
+    margin-top:10px;
+    padding:12px 28px;
+    font-size:14px;
+}
+
+.hero__stats{
+    grid-template-columns:repeat(2,1fr);
+    padding:0;
+}
+
+.hero__stat-col{
+    padding:22px 10px;
+}
+
+.hero__stat-col h2{
+    font-size:22px;
+}
+
+.hero__stat-col p{
+    font-size:12px;
+}
+
+.hero__stat-col:nth-child(2)::after{
+    display:none;
+}
+
+}
+
+/* ---------- Large Phones ---------- */
+
+@media (max-width:576px){
+
+.hero__frame{
+    min-height:590px;
+}
+
+.logo-left{
+    height:150px;
+}
+
+.logo-right{
+    height:60px;
+}
+
+.hero__content{
+    margin-top:70px;
+}
+
+.hero__content h1{
+    font-size:24px;
+}
+
+.hero__content p{
+    font-size:13px;
+}
+
+.hero__btn{
+    padding:11px 24px;
+    font-size:13px;
+}
+
+.hero__stat-col{
+    padding:18px 8px;
+}
+
+.hero__stat-col h2{
+    font-size:20px;
+}
+
+.hero__stat-col p{
+    font-size:11px;
+}
+
+}
+
+/* ---------- Small Phones ---------- */
+
+@media (max-width:430px){
+
+.hero__frame{
+    min-height:560px;
+}
+
+.logo-left{
+    height:130px;
+}
+
+.logo-right{
+    height:55px;
+}
+
+.hero__content{
+    margin-top:60px;
+}
+
+.hero__content h1{
+    font-size:21px;
+    line-height:1.35;
+}
+
+.hero__content p{
+    margin-top:18px;
+    font-size:12px;
+}
+
+.hero__btn{
+    padding:10px 22px;
+    font-size:13px;
+}
+
+.hero__stats{
+    grid-template-columns:1fr 1fr;
+}
+
+.hero__stat-col{
+    padding:16px 6px;
+}
+
+.hero__stat-col h2{
+    font-size:18px;
+}
+
+.hero__stat-col p{
+    font-size:10px;
+    letter-spacing:.5px;
+}
+
+}
+
+/* ---------- Extra Small Phones ---------- */
+
+@media (max-width:360px){
+
+.hero__frame{
+    min-height:540px;
+}
+
+.logo-left{
+    height:115px;
+}
+
+.logo-right{
+    height:50px;
+}
+
+.hero__content h1{
+    font-size:18px;
+}
+
+.hero__content p{
+    font-size:11px;
+}
+
+.hero__btn{
+    font-size:12px;
+    padding:10px 18px;
+}
+
+.hero__stat-col h2{
+    font-size:17px;
+}
+
+.hero__stat-col p{
+    font-size:9px;
+}
+
+}

@@ -1,0 +1,144 @@
+/* .services-grid-section {
+  padding: 80px 0;
+  background: var(--color-paper);
+}
+
+.services-grid__heading {
+  margin-bottom: 50px;
+}
+
+.services-grid__wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.services-grid__card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  background: #fff;
+  border: 1px solid var(--color-rule);
+  border-radius: 16px;
+  overflow: hidden;
+
+  transition: all 0.35s ease;
+
+  opacity: 0;
+  transform: translateY(30px);
+
+  animation: cardReveal 0.6s ease forwards;
+}
+
+@keyframes cardReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.services-grid__card:hover {
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 15px 35px rgba(0,0,0,0.08);
+}
+
+.services-grid__image-box {
+  height: 200px;
+  overflow: hidden;
+  background: #f5f5f5;
+}
+
+.services-grid__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  transition: transform .5s ease;
+}
+
+.services-grid__card:hover .services-grid__img {
+  transform: scale(1.05);
+}
+
+.services-grid__content {
+  padding: 18px;
+  text-align: center;
+}
+
+.services-grid__subtitle {
+  display: block;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  text-transform: uppercase;
+  letter-spacing: .08em;
+
+  color: #8d8d8d;
+
+  margin-bottom: 8px;
+}
+
+.services-grid__title {
+  margin: 0;
+
+  font-size: 18px;
+  font-weight: 600;
+
+  color: var(--color-ink);
+
+  line-height: 1.4;
+}
+
+.services-grid__expand-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.services-grid__expand {
+  width: 60px;
+  height: 60px;
+
+  border: none;
+  border-radius: 50%;
+
+  background:rgba(229, 126, 1, 0.849);
+  color: white;
+
+  font-size: 34px;
+  font-weight: 300;
+
+  cursor: pointer;
+
+  transition: all .3s ease;
+}
+
+.services-grid__expand:hover {
+  transform: rotate(90deg);
+
+  box-shadow:
+    0 10px 25px rgba(200,155,60,.35);
+}
+
+@media (max-width: 1200px) {
+  .services-grid__wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .services-grid__wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .services-grid__image-box {
+    height: 220px;
+  }
+} */
+
+
+
+

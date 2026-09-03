@@ -1,0 +1,392 @@
+.process-section {
+  padding: 40px 0 70px;
+  background-color:#ffffff;
+  overflow: hidden;
+}
+
+.process-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.process-header h2 {
+   color: #0d5b43;
+  font-weight: 600;
+  text-transform: none;
+  font-family: "Lato",sans-serif;
+  font-size:36px;
+  margin-bottom: 8px;
+}
+
+.process-header .subtitle {
+  font-size: 1.25rem;
+  color: black;
+  font-family: "Lato",sans-serif;
+  font-size:20px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.process-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 8px;
+}
+
+.process-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 18%;
+  position: relative;
+}
+
+/* Base Image Wrapper styling */
+.image-wrapper {
+  height: 130px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin-bottom: -8px; 
+  z-index: 1;
+}
+
+.step-img {
+  max-width: 100%;
+  max-height: 110px;
+  object-fit: contain;
+  opacity: 0;
+  transform: translateY(55px);
+  filter:  drop-shadow(0 6px 12px rgba(0, 90, 54, 0.3));
+  transition: transform 0.7s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.7s ease, filter 0.7s ease;
+}
+
+.step-card {
+  width: 100%;
+  background: #ffffff;
+  border: 2.5px solid  #0F3B2E;
+  padding: 20px 10px;
+  text-align: center;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  z-index: 2; 
+  opacity: 0;
+  transform: translateY(20px);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.step-card h3 {
+  color: black;
+  font-size: 15px;
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+/* Target span instead of div to safeguard structural logic */
+.process-arrow {
+  display: inline-block;
+  color:  #0F3B2E;
+  font-size: 1.6rem;
+  align-self: flex-end;
+  margin-bottom: 26px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+/* --- ON SCROLL INVIEW ACTIVE CLASS --- */
+.process-container.is-visible .step-card {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.process-container.is-visible .process-arrow {
+  opacity: 1;
+}
+
+.process-container.is-visible .step-img {
+  opacity: 1;
+  transform: translateY(0);
+  filter:  drop-shadow(0 6px 12px rgba(0, 90, 54, 0.3));
+}
+
+/* Applied infinite loop to wrapper safely after entrance animation ends */
+.process-container.is-visible .process-step .image-wrapper {
+  animation: floatGlow 3s ease-in-out infinite alternate;
+}
+
+/* Unified sequence structure applying perfectly left to right */
+.process-container.is-visible .process-step:nth-of-type(1) .step-card   { transition-delay: 0.1s; }
+.process-container.is-visible .process-step:nth-of-type(1) .step-img    { transition-delay: 0.25s; }
+.process-container.is-visible .process-step:nth-of-type(1) .image-wrapper { animation-delay: 0.95s; }
+.process-container.is-visible .process-arrow:nth-of-type(1)             { transition-delay: 0.35s; }
+
+.process-container.is-visible .process-step:nth-of-type(2) .step-card   { transition-delay: 0.45s; }
+.process-container.is-visible .process-step:nth-of-type(2) .step-img    { transition-delay: 0.6s; }
+.process-container.is-visible .process-step:nth-of-type(2) .image-wrapper { animation-delay: 1.3s; }
+.process-container.is-visible .process-arrow:nth-of-type(2)             { transition-delay: 0.7s; }
+
+.process-container.is-visible .process-step:nth-of-type(3) .step-card   { transition-delay: 0.8s; }
+.process-container.is-visible .process-step:nth-of-type(3) .step-img    { transition-delay: 0.95s; }
+.process-container.is-visible .process-step:nth-of-type(3) .image-wrapper { animation-delay: 1.65s; }
+.process-container.is-visible .process-arrow:nth-of-type(3)             { transition-delay: 1.05s; }
+
+.process-container.is-visible .process-step:nth-of-type(4) .step-card   { transition-delay: 1.15s; }
+.process-container.is-visible .process-step:nth-of-type(4) .step-img    { transition-delay: 1.3s; }
+.process-container.is-visible .process-step:nth-of-type(4) .image-wrapper { animation-delay: 2.0s; }
+.process-container.is-visible .process-arrow:nth-of-type(4)             { transition-delay: 1.4s; }
+
+.process-container.is-visible .process-step:nth-of-type(5) .step-card   { transition-delay: 1.5s; }
+.process-container.is-visible .process-step:nth-of-type(5) .step-img    { transition-delay: 1.65s; }
+.process-container.is-visible .process-step:nth-of-type(5) .image-wrapper { animation-delay: 2.35s; }
+
+@keyframes floatGlow {
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(-6px); }
+}
+/* ==========================================================
+   TABLET (1024px)
+========================================================== */
+
+@media (max-width:1024px){
+
+.process-section{
+padding:35px 18px 60px;
+}
+
+.process-header{
+margin-bottom:45px;
+}
+
+.process-header h2{
+font-size:30px;
+}
+
+.process-header .subtitle{
+font-size:17px;
+}
+
+.process-container{
+gap:12px;
+padding:0 10px;
+}
+
+.process-step{
+width:19%;
+}
+
+.image-wrapper{
+height:110px;
+}
+
+.step-img{
+max-height:95px;
+}
+
+.step-card{
+padding:16px 10px;
+min-height:72px;
+}
+
+.step-card h3{
+font-size:14px;
+}
+
+.process-arrow{
+font-size:22px;
+margin-bottom:24px;
+}
+
+}
+
+/* ==========================================================
+   MOBILE SLIDER VIEW
+========================================================== */
+
+@media (max-width:768px){
+
+.process-section{
+    padding:35px 0 55px;
+}
+
+.process-header{
+    padding:0 16px;
+    margin-bottom:35px;
+}
+
+.process-container{
+
+    display:flex;
+    flex-direction:row;
+    justify-content:flex-start;
+    align-items:flex-end;
+
+    overflow-x:auto;
+    overflow-y:hidden;
+
+    gap:20px;
+
+    padding:10px 20px 25px;
+
+    scroll-snap-type:x mandatory;
+    -webkit-overflow-scrolling:touch;
+
+    scrollbar-width:none;
+}
+
+.process-container::-webkit-scrollbar{
+    display:none;
+}
+
+
+.process-step{
+
+    flex:0 0 82%;
+    width:82%;
+    max-width:none;
+
+    scroll-snap-align:center;
+
+}
+
+
+.image-wrapper{
+
+    height:120px;
+    margin-bottom:-6px;
+
+    animation:none !important;
+
+}
+
+
+.step-img{
+    max-height:100px;
+}
+
+
+.step-card{
+
+    width:100%;
+    min-height:80px;
+    padding:18px 12px;
+
+}
+
+
+.step-card h3{
+    font-size:15px;
+}
+
+
+/* remove animation delay */
+.process-container.is-visible .step-card,
+.process-container.is-visible .step-img{
+    transition-delay:.1s !important;
+}
+
+
+.process-container.is-visible .process-step .image-wrapper{
+    animation:none;
+}
+
+}
+@media(max-width:480px){
+
+.process-section{
+    padding:30px 0 45px;
+}
+
+
+.process-header{
+    padding:0 12px;
+}
+
+
+.process-header h2{
+    font-size:22px;
+}
+
+
+.process-container{
+    padding-left:15px;
+    padding-right:15px;
+    gap:16px;
+}
+
+
+.process-step{
+
+    flex:0 0 88%;
+    width:88%;
+
+}
+
+
+.image-wrapper{
+    height:105px;
+}
+
+
+.step-img{
+    max-height:90px;
+}
+
+
+.step-card{
+    min-height:70px;
+}
+
+
+.step-card h3{
+    font-size:14px;
+}
+
+}
+
+
+@media (max-width:360px){
+
+.process-section{
+padding:28px 10px 40px;
+}
+
+.process-header h2{
+font-size:20px;
+}
+
+.process-header .subtitle{
+font-size:13px;
+}
+
+.process-step{
+max-width:230px;
+}
+
+.image-wrapper{
+height:90px;
+}
+
+.step-img{
+max-height:75px;
+}
+
+.step-card{
+min-height:64px;
+}
+
+.step-card h3{
+font-size:13px;
+}
+
+.process-arrow{
+font-size:20px;
+}
+
+}

@@ -1,0 +1,823 @@
+:root {
+  --nav-height: 70px;
+  --color-paper: #ffffff;
+  --color-ink: #1c1a17;
+  --color-ink-soft: #6e665a;
+  --color-rule: #e8e5dd;
+  --color-accent: #0a7957;
+
+  font-family: "Lato", sans-serif;
+}
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+  position: fixed;
+  top: 22px;
+  left: 0;
+  right: 0;
+
+  z-index: 1000;
+
+  background: #ffffff;
+
+  height: 74px;
+
+  border-bottom: 1px solid #ffffff;
+
+  padding: 0 3%;
+
+  box-sizing: border-box;
+
+  font-family: "Lato", sans-serif;
+
+  font-weight: 600;
+
+  font-size: 20px;
+}
+
+/* =========================================================
+   TOP BAR
+========================================================= */
+
+.navbar__topbar {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: 22px;
+
+  background: linear-gradient(
+    90deg,
+    oklch(45% 0.08 150) 0%,
+    oklch(55% 0.09 145) 100%
+  );
+
+  border-bottom: 1px solid var(--color-rule);
+
+  z-index: 1101;
+
+  font-family: "Lato", sans-serif;
+}
+
+.navbar__topbar-inner {
+  max-width: 1400px;
+
+  margin: 0 auto;
+
+  height: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 0 10px;
+}
+
+/* =========================================================
+   TOP BAR LEFT
+========================================================= */
+
+.navbar__topbar-left {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  font-size: 11px;
+
+  font-weight: 500;
+
+  color: #ffffff;
+}
+
+.navbar__contact-link {
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  text-decoration: none;
+
+  color: inherit;
+}
+
+.navbar__contact-link svg {
+  font-size: 13px;
+}
+
+.navbar__topbar-divider {
+  opacity: 0.5;
+}
+
+/* =========================================================
+   TOP BAR SOCIAL
+========================================================= */
+
+.navbar__topbar-right {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+.navbar__topbar-social {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  transition: color 0.2s ease;
+}
+
+.navbar__topbar-social:hover {
+  color: #dcdcdc;
+}
+
+.navbar__topbar-social svg {
+  font-size: 18px;
+}
+
+/* =========================================================
+   NAVBAR INNER
+========================================================= */
+
+.navbar__inner {
+  width: 100%;
+
+  height: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 18px;
+}
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.navbar__logo {
+  display: flex;
+
+  align-items: center;
+
+  flex-shrink: 0;
+}
+
+.navbar__logo-image {
+  height: 30px;
+
+  max-width: min(220px, 42vw);
+
+  width: auto;
+
+  object-fit: contain;
+}
+
+/* =========================================================
+   DESKTOP NAVIGATION
+========================================================= */
+
+.navbar__nav {
+  margin-left: auto;
+}
+
+.navbar__list {
+  display: flex;
+
+  align-items: center;
+
+  gap: clamp(20px, 3vw, 40px);
+
+  list-style: none;
+
+  margin: 0;
+
+  padding: 0;
+}
+
+.navbar__item {
+  position: relative;
+}
+
+/* =========================================================
+   NAV LINKS
+========================================================= */
+
+.navbar__link {
+  background: none;
+
+  border: none;
+
+  cursor: pointer;
+
+  color: var(--color-ink);
+
+  font-size: 15px;
+
+  font-family: "Lato", sans-serif;
+
+  font-weight: 600;
+
+  text-transform: uppercase;
+
+  padding: 25px 0;
+
+  display: block;
+
+  text-decoration: none;
+
+  position: relative;
+
+  transition: color 0.2s ease;
+}
+
+.navbar__link::after {
+  content: "";
+
+  position: absolute;
+
+  bottom: 15px;
+
+  left: 0;
+
+  width: 0%;
+
+  height: 2px;
+
+  background: var(--color-accent);
+
+  transition: width 0.25s ease;
+}
+
+.navbar__item:hover .navbar__link::after {
+  width: 100%;
+}
+
+.navbar__item:hover .navbar__link {
+  color: var(--color-accent);
+}
+
+/* =========================================================
+   DROPDOWN BUTTON
+========================================================= */
+
+.navbar__link--dropdown {
+  display: flex;
+
+  align-items: center;
+
+  gap: 4px;
+}
+
+.navbar__arrow {
+  font-size: 18px !important;
+
+  transition: transform 0.25s ease;
+}
+
+.navbar__item:hover .navbar__arrow {
+  transform: rotate(180deg);
+}
+
+/* =========================================================
+   DESKTOP DROPDOWN
+========================================================= */
+
+.navbar__dropdown {
+  position: absolute;
+
+  font-weight: 400;
+
+  top: 100%;
+
+  left: 50%;
+
+  transform: translateX(-50%) translateY(-10px);
+
+  min-width: 220px;
+
+  background: #ffffff;
+
+  border: 1px solid var(--color-rule);
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  border-radius: 6px;
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  transition: all 0.2s ease;
+
+  padding: 6px 0;
+
+  list-style: none;
+}
+
+.navbar__item:hover .navbar__dropdown {
+  opacity: 1;
+
+  visibility: visible;
+
+  transform: translateX(-50%) translateY(0);
+}
+
+.navbar__dropdown-link {
+  display: block;
+
+  padding: 12px 18px;
+
+  text-decoration: none;
+
+  color: #000000;
+
+  font-family: "Lato", sans-serif;
+
+  font-size: 15px;
+
+  transition: all 0.2s ease;
+}
+
+.navbar__dropdown-link:hover {
+  color: var(--color-accent);
+
+  background: #faf8f5;
+}
+
+/* =========================================================
+   LOGIN BUTTON - DESKTOP
+========================================================= */
+
+.navbar__login-btn {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 9px 22px;
+
+  margin-left: 2px;
+
+  background: var(--color-accent);
+
+  color: #ffffff;
+
+  border: 1px solid var(--color-accent);
+
+  border-radius: 5px;
+
+  font-family: "Lato", sans-serif;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  text-transform: uppercase;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.navbar__login-btn:hover {
+  background: #06553d;
+
+  border-color: #06553d;
+
+  color: #ffffff;
+
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   BURGER
+========================================================= */
+
+.navbar__burger {
+  display: none;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  gap: 6px;
+
+  cursor: pointer;
+
+  width: 30px;
+
+  height: 30px;
+
+  z-index: 1100;
+
+  align-items: center;
+
+  background: none;
+
+  border: none;
+}
+
+.navbar__burger span {
+  width: 26px;
+
+  height: 2px;
+
+  background: var(--color-ink);
+
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+
+  display: block;
+}
+
+.navbar__burger--open span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.navbar__burger--open span:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar__burger--open span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+.navbar__mobile {
+  position: fixed;
+
+  top: 22px;
+
+  right: 0;
+
+  width: 320px;
+
+  max-width: 85%;
+
+  height: calc(100vh - 22px);
+
+  background: #ffffff;
+
+  z-index: 999;
+
+  transform: translateX(100%);
+
+  transition: transform 0.35s ease;
+
+  overflow-y: auto;
+
+  box-shadow: -10px 0 25px rgba(0, 0, 0, 0.08);
+
+  display: flex;
+
+  flex-direction: column;
+}
+
+.navbar__mobile--open {
+  transform: translateX(0);
+}
+
+/* =========================================================
+   MOBILE LIST
+========================================================= */
+
+.navbar__mobile-list {
+  flex: 1;
+
+  list-style: none;
+
+  padding: 20px 30px;
+
+  margin: 0;
+}
+
+.navbar__mobile button,
+.navbar__mobile .navbar__link {
+  width: 100%;
+
+  background: none;
+
+  border: none;
+
+  text-align: left;
+
+  padding: 16px 0;
+
+  font-size: 15px;
+
+  font-family: "Lato", sans-serif;
+
+  font-weight: 600;
+
+  text-transform: uppercase;
+
+  color: var(--color-ink);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  text-decoration: none;
+
+  cursor: pointer;
+}
+
+/* =========================================================
+   MOBILE DROPDOWN
+========================================================= */
+
+.navbar__mobile-dropdown {
+  padding: 0 0 0 15px;
+
+  margin: 0;
+
+  background: #fafafa;
+
+  list-style: none;
+}
+
+.navbar__mobile .navbar__dropdown-link {
+  display: block;
+
+  padding: 12px;
+
+  font-family: "Lato", sans-serif;
+
+  font-size: 14px;
+
+  color: var(--color-ink-soft);
+
+  border-bottom: 1px solid var(--color-rule);
+}
+
+/* =========================================================
+   MOBILE ARROW
+========================================================= */
+
+.navbar__mobile-arrow {
+  font-size: 20px !important;
+
+  transition: transform 0.25s ease;
+}
+
+.navbar__mobile-arrow--open {
+  transform: rotate(180deg);
+}
+
+/* =========================================================
+   MOBILE LOGIN
+========================================================= */
+
+.navbar__mobile-login-wrapper {
+  margin-top: 12px;
+}
+
+.navbar__mobile-login {
+  display: block;
+
+  width: 100%;
+
+  padding: 13px 20px;
+
+  background: var(--color-accent);
+
+  color: #ffffff !important;
+
+  border: 1px solid var(--color-accent);
+
+  border-radius: 5px;
+
+  text-align: center;
+
+  font-family: "Lato", sans-serif;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  text-transform: uppercase;
+
+  text-decoration: none;
+
+  box-sizing: border-box;
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.navbar__mobile-login:hover {
+  background: #06553d;
+
+  border-color: #06553d;
+
+  color: #ffffff !important;
+}
+
+/* =========================================================
+   MOBILE SOCIAL
+========================================================= */
+
+.navbar__mobile-social {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 22px;
+
+  padding: 22px 0 30px;
+
+  border-top: 1px solid #e8e5dd;
+}
+
+.navbar__mobile-social a {
+  color: #0a7957;
+}
+
+.navbar__mobile-social svg {
+  font-size: 28px;
+
+  transition: 0.3s;
+}
+
+.navbar__mobile-social a:hover {
+  color: #06553d;
+}
+
+/* =========================================================
+   MOBILE - 900px
+========================================================= */
+
+@media (max-width: 900px) {
+  .navbar {
+    top: 0;
+
+    padding: 0 16px;
+  }
+
+  .navbar__topbar {
+    display: none;
+  }
+
+  .navbar__logo-image {
+    height: 30px;
+
+    max-width: 170px;
+  }
+
+  .navbar__nav {
+    display: none !important;
+  }
+
+  /* Hide desktop login */
+  .navbar__login-btn {
+    display: none;
+  }
+
+  .navbar__burger {
+    display: flex !important;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    background: none;
+
+    border: none;
+
+    cursor: pointer;
+  }
+
+  .navbar__mobile {
+    top: 0;
+
+    height: 100vh;
+  }
+
+  .navbar__mobile-list {
+    padding: 20px;
+  }
+
+  .navbar__mobile button,
+  .navbar__mobile .navbar__link {
+    width: 100%;
+
+    display: flex;
+
+    padding: 15px 0;
+
+    font-size: 15px;
+
+    text-decoration: none;
+
+    color: var(--color-ink);
+
+    background: none;
+
+    border: none;
+
+    text-align: left;
+
+    text-transform: uppercase;
+
+    font-weight: 600;
+  }
+
+  .navbar__mobile .navbar__dropdown-link {
+    display: block;
+
+    padding: 12px;
+
+    font-size: 14px;
+  }
+}
+
+/* =========================================================
+   MOBILE - 768px
+========================================================= */
+
+@media (max-width: 768px) {
+  .navbar {
+    height: 68px;
+  }
+
+  .navbar__logo-image {
+    height: 30px;
+  }
+
+  .navbar__mobile {
+    width: 300px;
+  }
+}
+
+/* =========================================================
+   MOBILE - 576px
+========================================================= */
+
+@media (max-width: 576px) {
+  .navbar {
+    padding: 0 14px;
+  }
+
+  .navbar__logo-image {
+    height: 30px;
+
+    max-width: 150px;
+  }
+
+  .navbar__mobile {
+    width: 280px;
+
+    max-width: 90%;
+  }
+}
+
+/* =========================================================
+   MOBILE - 480px
+========================================================= */
+
+@media (max-width: 480px) {
+  .navbar__contact-link span {
+    display: none;
+  }
+
+  .navbar__topbar-left {
+    gap: 16px;
+  }
+}
