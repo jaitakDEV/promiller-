@@ -8,19 +8,30 @@ import ProductShowcase from "../../components/sections/ProductShowcase/ProductSh
 import HowItWorks from "../../components/sections/ProcessWorking/HowItWorks";
 import Operationsflow from "../../components/sections/Operationsflow/Operationsflow";
 import FAQ from "../../components/sections/FAQ/FAQ";
-
+import VideoDemo from "../../components/sections/VideoDemo/VideoDemo";
+import DashboardPreview from "../../components/sections/DashboardPreview/DashboardPreview";
+import AnywhereYouWork from "../../components/sections/AnywhereYouWork/AnywhereYouWork";
+import CompareTable from "../../components/sections/CompareTable/CompareTable";
+import Maintenance from "../../components/sections/Maintenance/Maintenance";
+import PlanFinder from "../../components/sections/PlanFinder/PlanFinder";
 export default function Home() {
   return (
     <main>
       <Hero />
       <About />
-      <Operationsflow/>
+      <Operationsflow />
       <Products />
-      <MillingNetwork />
+      <DashboardPreview />
+      <VideoDemo />
+      {/* <MillingNetwork /> */}
       <HowItWorks />
-      <BusinessModel />
+      <CompareTable />
+      {/* <BusinessModel /> */}
+      <Maintenance />
+
       <FeatureGrid />
-      <ProductShowcase />
+      <PlanFinder />
+      <AnywhereYouWork />
       <FAQ />
     </main>
   );

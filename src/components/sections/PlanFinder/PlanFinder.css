@@ -1,0 +1,304 @@
+#plan-finder {
+  --brand: #0d5b43;
+  --brand-light: #14805d;
+  --brand-dark: #093f2e;
+  padding: 90px 20px;
+  background: #f4f9f7;
+}
+
+#plan-finder .wrap {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+#plan-finder .section-head {
+  text-align: center;
+  margin: 0 auto 36px;
+}
+
+#plan-finder .section-tag {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 999px;
+  background: rgba(13, 91, 67, 0.1);
+  color: var(--brand);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+#plan-finder h2 {
+  font-size: clamp(24px, 4vw, 34px);
+  font-weight: 700;
+  color: #10251d;
+  line-height: 1.35;
+  margin: 0 0 14px;
+}
+
+#plan-finder h2 .grad {
+  background: linear-gradient(90deg, var(--brand) 0%, var(--brand-light) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+#plan-finder .section-head > p {
+  color: #4a5f57;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* ---------- Card shell ---------- */
+#plan-finder .quiz-card {
+  position: relative;
+  background: #ffffff;
+  border-radius: 22px;
+  border: 1px solid rgba(13, 91, 67, 0.12);
+  box-shadow: 0 24px 55px rgba(13, 91, 67, 0.12);
+  padding: 34px;
+  min-height: 320px;
+}
+
+/* ---------- Progress ---------- */
+#plan-finder .quiz-progress-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 30px;
+}
+
+#plan-finder .quiz-progress-step {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--brand-dark);
+  white-space: nowrap;
+}
+
+#plan-finder .quiz-progress-track {
+  flex: 1;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(13, 91, 67, 0.12);
+  overflow: hidden;
+}
+
+#plan-finder .quiz-progress-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--brand) 0%, var(--brand-light) 100%);
+  transition: width 0.35s ease;
+}
+
+/* ---------- Step / question ---------- */
+#plan-finder .quiz-step {
+  animation: qf-fade-in 0.3s ease;
+}
+
+@keyframes qf-fade-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+#plan-finder .quiz-question {
+  font-size: 19px;
+  font-weight: 700;
+  color: #10251d;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#plan-finder .quiz-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#plan-finder .quiz-option {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 15px 18px;
+  border-radius: 14px;
+  border: 1.5px solid rgba(13, 91, 67, 0.14);
+  background: #f9fcfb;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background 0.2s ease, transform 0.15s ease;
+}
+
+#plan-finder .quiz-option:hover {
+  border-color: var(--brand);
+  background: #eef7f2;
+  transform: translateY(-1px);
+}
+
+#plan-finder .quiz-option:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+}
+
+#plan-finder .quiz-option.selected {
+  border-color: var(--brand);
+  background: #e7f5ee;
+  box-shadow: 0 6px 16px rgba(13, 91, 67, 0.15);
+}
+
+#plan-finder .quiz-option-icon {
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: #ffffff;
+  border: 1px solid rgba(13, 91, 67, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#plan-finder .quiz-option-icon svg {
+  width: 19px;
+  height: 19px;
+}
+
+#plan-finder .quiz-option-text {
+  font-size: 14.5px;
+  font-weight: 600;
+  color: #263934;
+}
+
+/* ---------- Result ---------- */
+#plan-finder .quiz-result {
+  text-align: center;
+  padding: 8px 0 4px;
+}
+
+#plan-finder .quiz-result-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  margin: 0 auto 16px;
+  background: linear-gradient(135deg, var(--brand) 0%, var(--brand-light) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 24px rgba(13, 91, 67, 0.35);
+}
+
+#plan-finder .quiz-result-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+#plan-finder .quiz-result-tag {
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--brand);
+  margin-bottom: 8px;
+}
+
+#plan-finder .quiz-result-name {
+  font-size: 28px;
+  font-weight: 800;
+  color: #10251d;
+  margin-bottom: 12px;
+}
+
+#plan-finder .quiz-result-desc {
+  font-size: 15px;
+  color: #4a5f57;
+  line-height: 1.65;
+  max-width: 480px;
+  margin: 0 auto 26px;
+}
+
+#plan-finder .quiz-result-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+#plan-finder .btn-gradient {
+  display: inline-block;
+  padding: 13px 28px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--brand) 0%, var(--brand-light) 100%);
+  color: #ffffff;
+  font-size: 14.5px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 12px 26px rgba(13, 91, 67, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#plan-finder .btn-gradient:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 32px rgba(13, 91, 67, 0.36);
+}
+
+#plan-finder .quiz-back-link {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #5c6c66;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+#plan-finder .quiz-back-link:hover {
+  color: var(--brand-dark);
+}
+
+/* ---------- Back button (top nav within card) ---------- */
+#plan-finder .quiz-back {
+  position: absolute;
+  top: 22px;
+  right: 28px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #5c6c66;
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 999px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+#plan-finder .quiz-back:hover {
+  background: rgba(13, 91, 67, 0.08);
+  color: var(--brand-dark);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 640px) {
+  #plan-finder {
+    padding: 56px 16px;
+  }
+
+  #plan-finder .quiz-card {
+    padding: 24px 18px;
+    border-radius: 18px;
+  }
+
+  #plan-finder .quiz-back {
+    top: 16px;
+    right: 16px;
+  }
+
+  #plan-finder .quiz-question {
+    font-size: 17px;
+  }
+
+  #plan-finder .quiz-option {
+    padding: 13px 14px;
+  }
+
+  #plan-finder .quiz-result-name {
+    font-size: 24px;
+  }
+}
